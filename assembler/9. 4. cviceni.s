@@ -9,7 +9,7 @@
 #ori t0, t0, 0x100
 
 #addi t1, zero, 5
-#addi x2, zero, 29
+#addi x2, zero, 29	
 
 #loop:
 #	sw t1, 4(t0)

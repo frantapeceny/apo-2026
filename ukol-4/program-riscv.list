@@ -1,0 +1,117 @@
+
+program code
+
+
+build/program-riscv:     file format elf32-littleriscv
+
+
+Disassembly of section my_text:
+
+00010280 <subroutine_fnc>:
+   10280:	fc010113          	addi	sp,sp,-64
+   10284:	02812e23          	sw	s0,60(sp)
+   10288:	04010413          	addi	s0,sp,64
+   1028c:	fca42623          	sw	a0,-52(s0)
+   10290:	fdb40793          	addi	a5,s0,-37
+   10294:	03f00713          	li	a4,63
+   10298:	fee42423          	sw	a4,-24(s0)
+   1029c:	fcc42703          	lw	a4,-52(s0)
+   102a0:	fee42223          	sw	a4,-28(s0)
+   102a4:	fef42023          	sw	a5,-32(s0)
+   102a8:	00100793          	li	a5,1
+   102ac:	fcf42e23          	sw	a5,-36(s0)
+   102b0:	fe842883          	lw	a7,-24(s0)
+   102b4:	fe442503          	lw	a0,-28(s0)
+   102b8:	fe042583          	lw	a1,-32(s0)
+   102bc:	fdc42603          	lw	a2,-36(s0)
+   102c0:	00000073          	ecall
+   102c4:	00050793          	mv	a5,a0
+   102c8:	fef42623          	sw	a5,-20(s0)
+   102cc:	fec42783          	lw	a5,-20(s0)
+   102d0:	0007d663          	bgez	a5,102dc <subroutine_fnc+0x5c>
+   102d4:	fff00793          	li	a5,-1
+   102d8:	0180006f          	j	102f0 <subroutine_fnc+0x70>
+   102dc:	fec42783          	lw	a5,-20(s0)
+   102e0:	00079663          	bnez	a5,102ec <subroutine_fnc+0x6c>
+   102e4:	00000793          	li	a5,0
+   102e8:	0080006f          	j	102f0 <subroutine_fnc+0x70>
+   102ec:	fdb44783          	lbu	a5,-37(s0)
+   102f0:	00078513          	mv	a0,a5
+   102f4:	03c12403          	lw	s0,60(sp)
+   102f8:	04010113          	addi	sp,sp,64
+   102fc:	00008067          	ret
+
+00010300 <toplevel_fnc>:
+   10300:	fc010113          	addi	sp,sp,-64
+   10304:	02112e23          	sw	ra,60(sp)
+   10308:	02812c23          	sw	s0,56(sp)
+   1030c:	04010413          	addi	s0,sp,64
+   10310:	0c80006f          	j	103d8 <toplevel_fnc+0xd8>
+   10314:	fec42783          	lw	a5,-20(s0)
+   10318:	0007d663          	bgez	a5,10324 <toplevel_fnc+0x24>
+   1031c:	fec42783          	lw	a5,-20(s0)
+   10320:	0d00006f          	j	103f0 <toplevel_fnc+0xf0>
+   10324:	fec42783          	lw	a5,-20(s0)
+   10328:	0ff7f793          	zext.b	a5,a5
+   1032c:	fcf405a3          	sb	a5,-53(s0)
+   10330:	fcb44703          	lbu	a4,-53(s0)
+   10334:	05f00793          	li	a5,95
+   10338:	04f71a63          	bne	a4,a5,1038c <toplevel_fnc+0x8c>
+   1033c:	000117b7          	lui	a5,0x11
+   10340:	40478793          	addi	a5,a5,1028 # 11404 <replace_txt>
+   10344:	04000713          	li	a4,64
+   10348:	fee42423          	sw	a4,-24(s0)
+   1034c:	00100713          	li	a4,1
+   10350:	fee42223          	sw	a4,-28(s0)
+   10354:	fef42023          	sw	a5,-32(s0)
+   10358:	00200793          	li	a5,2
+   1035c:	fcf42e23          	sw	a5,-36(s0)
+   10360:	fe842883          	lw	a7,-24(s0)
+   10364:	fe442503          	lw	a0,-28(s0)
+   10368:	fe042583          	lw	a1,-32(s0)
+   1036c:	fdc42603          	lw	a2,-36(s0)
+   10370:	00000073          	ecall
+   10374:	00050793          	mv	a5,a0
+   10378:	fef42623          	sw	a5,-20(s0)
+   1037c:	fec42783          	lw	a5,-20(s0)
+   10380:	0407dc63          	bgez	a5,103d8 <toplevel_fnc+0xd8>
+   10384:	fff00793          	li	a5,-1
+   10388:	0680006f          	j	103f0 <toplevel_fnc+0xf0>
+   1038c:	fcb40793          	addi	a5,s0,-53
+   10390:	04000713          	li	a4,64
+   10394:	fce42c23          	sw	a4,-40(s0)
+   10398:	00100713          	li	a4,1
+   1039c:	fce42a23          	sw	a4,-44(s0)
+   103a0:	fcf42823          	sw	a5,-48(s0)
+   103a4:	00100793          	li	a5,1
+   103a8:	fcf42623          	sw	a5,-52(s0)
+   103ac:	fd842883          	lw	a7,-40(s0)
+   103b0:	fd442503          	lw	a0,-44(s0)
+   103b4:	fd042583          	lw	a1,-48(s0)
+   103b8:	fcc42603          	lw	a2,-52(s0)
+   103bc:	00000073          	ecall
+   103c0:	00050793          	mv	a5,a0
+   103c4:	fef42623          	sw	a5,-20(s0)
+   103c8:	fec42783          	lw	a5,-20(s0)
+   103cc:	0007d663          	bgez	a5,103d8 <toplevel_fnc+0xd8>
+   103d0:	fff00793          	li	a5,-1
+   103d4:	01c0006f          	j	103f0 <toplevel_fnc+0xf0>
+   103d8:	00000513          	li	a0,0
+   103dc:	ea5ff0ef          	jal	ra,10280 <subroutine_fnc>
+   103e0:	fea42623          	sw	a0,-20(s0)
+   103e4:	fec42783          	lw	a5,-20(s0)
+   103e8:	f2f046e3          	bgtz	a5,10314 <toplevel_fnc+0x14>
+   103ec:	00000793          	li	a5,0
+   103f0:	00078513          	mv	a0,a5
+   103f4:	03c12083          	lw	ra,60(sp)
+   103f8:	03812403          	lw	s0,56(sp)
+   103fc:	04010113          	addi	sp,sp,64
+   10400:	00008067          	ret
+
+program data
+
+
+build/program-riscv:     file format elf32-littleriscv
+
+Contents of section my_data:
+ 11404 5c5f00                               \_.             
